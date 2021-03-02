@@ -19,7 +19,7 @@ RUN apt-get update \
  && DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y \
       wget ca-certificates make gcc g++ pkg-config
 
-COPY assets/build/ ${NGINX_BUILD_ASSETS_DIR}/
+COPY assets/build/install.sh ${NGINX_BUILD_ASSETS_DIR}/install.sh
 
 RUN chmod +x ${NGINX_BUILD_ASSETS_DIR}/install.sh
 
@@ -46,6 +46,8 @@ RUN apt-get update \
  && rm -rf /var/lib/apt/lists/*
 
 COPY --from=builder /var/lib/docker-nginx/rootfs /
+
+COPY assets/build/config /etc/nginx/
 
 EXPOSE 80/tcp 443/tcp 1935/tcp
 
