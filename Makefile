@@ -1,7 +1,7 @@
 all: build
 
 build:
-	@docker build --tag=sameersbn/nginx .
+	@docker build --tag=ftntming/nginx-xmpp .
 
 release: build
-	@docker build --tag=sameersbn/nginx:$(shell cat VERSION) .
+	@docker build --tag=ftntming/nginx-xmpp:$(shell cat VERSION) .

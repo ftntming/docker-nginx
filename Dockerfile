@@ -49,4 +49,4 @@ EXPOSE 80/tcp 443/tcp 1935/tcp
 
 ENTRYPOINT ["/sbin/entrypoint.sh"]
 
-CMD ["/usr/sbin/nginx"]
+CMD ["/usr/local/nginx/sbin/nginx", "-c", "/etc/nginx/nginx.conf", "-g", "daemon off;"]

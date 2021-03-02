@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+export PATH=$PATH:/usr/local/nginx/sbin/
+
 [[ $DEBUG == true ]] && set -x
 
 create_log_dir() {
