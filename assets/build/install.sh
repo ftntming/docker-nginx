@@ -102,6 +102,6 @@ make -j$(nproc)
 make DESTDIR=${NGINX_BUILD_ROOT_DIR} install
 
 # install default configuration
-mkdir -p ${NGINX_BUILD_ROOT_DIR}/etc/nginx
-cp -rf ${NGINX_BUILD_ASSETS_DIR}/config/* ${NGINX_BUILD_ROOT_DIR}/etc/nginx/
+#mkdir -p ${NGINX_BUILD_ROOT_DIR}/etc/nginx
+#cp -rf ${NGINX_BUILD_ASSETS_DIR}/config/* ${NGINX_BUILD_ROOT_DIR}/etc/nginx/
 

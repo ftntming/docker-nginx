@@ -25,6 +25,8 @@ RUN chmod +x ${NGINX_BUILD_ASSETS_DIR}/install.sh
 
 RUN ${NGINX_BUILD_ASSETS_DIR}/install.sh
 
+COPY assets/build/config ${NGINX_BUILD_ROOT_DIR}/etc/nginx/
+
 COPY entrypoint.sh ${NGINX_BUILD_ROOT_DIR}/sbin/entrypoint.sh
 
 RUN chmod 755 ${NGINX_BUILD_ROOT_DIR}/sbin/entrypoint.sh
