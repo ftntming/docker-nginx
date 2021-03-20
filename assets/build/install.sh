@@ -92,7 +92,8 @@ ln -sf /usr/local/ssl/bin/openssl `which openssl`
 # (Used to check the version of the Current OpenSSL binaries)
 openssl version -v
 
-git clone https://github.com/ftntming/nginx-xmpp -b 1.9.10-xmpp ${NGINX_BUILD_ASSETS_DIR}/nginx
+# Copy nginx-xmpp from src instead of geting it from github
+# git clone https://github.com/ftntming/nginx-xmpp -b 1.9.10-xmpp ${NGINX_BUILD_ASSETS_DIR}/nginx
 cd ${NGINX_BUILD_ASSETS_DIR}/nginx
 # install_packages libpcre++-dev libssl-dev zlib1g-dev libxslt1-dev libgd-dev libgeoip-dev uuid-dev
 install_packages libpcre++-dev zlib1g-dev libxslt1-dev libgd-dev libgeoip-dev uuid-dev

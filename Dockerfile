@@ -19,6 +19,9 @@ RUN apt-get update \
  && DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y \
       wget ca-certificates make gcc g++ pkg-config
 
+# Copy nginx-xmpp from src instead of geting it from github
+COPY nginx-xmpp ${NGINX_BUILD_ASSETS_DIR}/nginx
+
 COPY assets/build/install.sh ${NGINX_BUILD_ASSETS_DIR}/install.sh
 
 RUN chmod +x ${NGINX_BUILD_ASSETS_DIR}/install.sh
